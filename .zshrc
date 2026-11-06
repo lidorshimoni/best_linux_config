@@ -9,6 +9,9 @@ plugins=(git zsh-autosuggestions web-search zsh-syntax-highlighting docker pipen
 ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
+
+HISTSIZE=1000000
+SAVEHIST=1000000
 source ~/.exports
 source ~/.aliases
 source ~/.functions
@@ -16,8 +19,6 @@ export LANG=en_US.UTF-8
 
 eval "`pip completion --zsh`"
 compctl -K _pip_completion pip3
-
-eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
